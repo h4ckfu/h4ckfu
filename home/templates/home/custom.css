@@ -1,0 +1,39 @@
+
+html body {
+    background-color: #303338;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a {color:#4ba676}
+a:hover{color:#fff;}
+
+.btn-primary {
+    background-color: #2e3338;
+ }
+
+ .bg-dark{
+     background-color: #303338;
+ }
+
+ .jumbotron{background-color: #33373c;
+            color:#fefefe;        
+    }
+
+.bg-h4ck{background-color:#303338;
+    color:#fefefe;}
+
+.btn-dark{border: 2px solid #4ba676; background-color: #292c2f; color:#4ba676;}
+
+.ninja {max-height: 500px;}
+
+.h4ck-5{background-color:#23272d; color:#d6d7d6; margin:0px; padding:0px;}
+
+.shadow-sm{background-color: #33373c; margin:0px 0px 0px 10px;}
+.shadow-sm h5{color: #6c757d;margin:0px;}
+.shadow-sm h6{color: #6c757d;margin:0px;}
+
+.row{text-align:right;}
+.mb-4{font-size: -.5em}
+.shadow-footer{background-color: #33373c; padding:1em; margin-top:1em;}
+
+.the_icons{margin-left: .5em;}
