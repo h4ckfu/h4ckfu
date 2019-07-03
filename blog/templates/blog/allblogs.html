@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+      <img src="{% static 'blog_one.png' %}" class="float-left img-responsive ninja" alt="h4ckfu" />
+      <h2 class="jumbotron-heading">This Damn Blog</h2>
+    </div>
+  </section>
+
+  <div class="album py-11 bg-h4ck">
+    <div class="container">
+        <div class="row">
+               
+
+            <div class="col-md-7">
+                    <h5>Blog Page Stuff</h5><br />
+            
+                <div class="card mb-7 shadow-sm">
+                        {% for blog in blogs.all   %}  
+                    <div class="card-body">
+                                            
+                        <p>
+                            <img src="{{blog.image.url}}" width="200" class="img-thumbnail img-fluid img-rounded" alt="h4ckfu" />                       
+                            <br /><a href="{% url 'detail' blog.id %}"><h4>{{blog.title}}</h4></a>
+                            <small>{{blog.jobdate}}</small><br />
+                            {{blog.summary}}
+                        </p>
+                        
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+
+                    <div class="card-body">
+                      
+                      <h6>Web Apps?</h6>
+                      <small><p>I'm good at Python and HTML/CSS.  Those things together can build some interesting web based apps.</p>
+                      <p>Like <a href="#">Youtube and Instagram</a>...</p></small>
+
+                      <br />  
+                        <!--
+                        <h6>Quick Links</h6>                        
+                        <small><ul>
+                                {% for news_item in news_items %}
+                            <li><a href="{{ news_item.url }}">{{ news_item.title }}</a></li>
+                                    {% endfor %}
+                        </ul></small>
+
+                        <h6>Certs, etc...</h6>                        
+                        <small><ul>
+                                {% for news_item in news_items %}
+                            <li><a href="{{ news_item.url }}">{{ news_item.title }}</a></li>
+                                    {% endfor %}
+                        </ul></small>
+
+                    -->
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div> <!--end row class -->
+
+        {% endblock %}

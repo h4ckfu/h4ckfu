@@ -1,56 +1,11 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html' %}
 
 {% load staticfiles  %}
-{% load static%}
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="The Front Page to My Interwebs">
+{% block content %}
 
-    <title>H4ckFu by Trip Kendall</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <!-- <link rel="stylesheet" type="text/css" href="{% static "custom.css" %}"> -->
- 
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
- 
-  </head>
-  <body>
-
-<header>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="{% url 'home' %}">h4ckfu</a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="https://twitter.com/h4ckfu">@</a>
-      <a class="nav-item nav-link" href="{% static 'Resume.pdf' %}">cv</a>
-      <a class="nav-item nav-link" href="#">mssg</a>
-      <a class="nav-item nav-link" href="#">schd</a>
-      <a class="nav-item nav-link" href="#">work</a>
-      <a class="nav-item nav-link" href="#">snip</a>
-      <a class="nav-item nav-link" href="#">peep</a>
-      <a class="nav-item nav-link" href="#">cert</a>
-    </div>
-  </div>
-</nav>
-
-</header>
-
-<main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
+   
       <img src="{% static 'h4ckfu.png' %}" class="float-left img-responsive ninja" alt="h4ckfu" />
       <h1 class="jumbotron-heading">This website's an interactive resume...</h1>
       
@@ -63,7 +18,7 @@
       
       <p>
         <a href="#" class="btn btn-dark">Whats This Then?</a>
-        <a href="#" class="btn btn-secondary my-2">What's Goin' On...</a>
+        <a href="blog" class="btn btn-secondary my-2">What's Goin' On...</a>
       </p>
     </div>
   </section>
@@ -80,7 +35,7 @@
                     
                     <div class="card-body">
 
-                        <img src="#" class="float-right img-responsive the_icons" alt="h4ckfu" /><h5>Brainstorm and Son</h5>                        
+                        <img src="{% static 'gears.png' %}" class="float-right img-responsive the_icons" alt="h4ckfu" /><h5>Brainstorm and Son</h5>                        
                         <p>
                          As often happens, my son and i were kicking around an idea.  I had finally given in to the idea of leveraging my web skills in conjunction with the Python I had been studying dilligenty for a year or so.  <br />
                          <a href="#">Read More...</a>
@@ -89,10 +44,11 @@
 
                     <div class="card-body">
 
-                        <img src="#" class="float-right img-responsive the_icons" alt="h4ckfu" />                       
-                        <h5>Latest Genius Web Thingie</h5>                        
+                        <img src="{% static 'chart.png' %}" class="float-right img-responsive the_icons" alt="h4ckfu" />                       
+                        <h5>I Chart Stuff...</h5>                        
                         <p>
-                         As often happens, my son and i were kicking around an idea.  I had finally given in to the idea of leveraging my web skills in conjunction with the Python I had been studying dilligenty for a year or so.  <br />
+                         I collect and store data from websites and social media.
+                         I've been doing so dilligently since the first of the year.  I track people places and things.  <br />
                          <a href="#">Read More...</a>
                         </p>
                     </div>
@@ -114,13 +70,13 @@
             </div>
 
 
+            <!--This is essentially the sidebar area-->
+
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  
-              
 
                     <div class="card-body">
-                      
+                    
                       <h6>Web Apps?</h6>
                       <small><p>I'm good at Python and HTML/CSS.  Those things together can build some interesting web based apps.</p>
                       <p>Like <a href="#">Youtube and Instagram</a>...</p></small>
@@ -151,25 +107,6 @@
 
         </div> <!--end row class -->
 
-        
+        {% endblock %}
 
-    </div>
-  </div>
-
-</main>
-
-<footer class="text-muted shadow-footer">
-  <div class="container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>A Trip Kendall Joint {% now "Y" %}</p>
-    <p>Visit my main site: <a href="https://tripkendall.com.com/">Trip Kendall.com</a> or follow me on <a href="https://twitter.com/h4ckfu">Twitter</a>.</p>
-  </div>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-</body>
-
-</html>
