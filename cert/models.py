@@ -5,3 +5,6 @@ class Cert(models.Model):
     image = models.ImageField(upload_to='images/')
     title = models.CharField(max_length = 256)
     summary = models.CharField(max_length = 256)
+
+    def __str__(self):
+        return self.title
